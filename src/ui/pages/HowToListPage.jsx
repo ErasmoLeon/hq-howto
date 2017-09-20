@@ -11,16 +11,26 @@ const state = {
     containerClass: 'people-information-container',
     navbarClass: 'people-information-navbar',
     title: 'Información de personas',
-    navItems: ['Desaparecidas', 'Rescatadas']
+    navItems: ['Desaparecidas', 'Rescatadas'],
+    columns: [{
+      key: 'id',
+      name: 'ID',
+      width: 215,
+      filterable: true
+    }, {
+      key: 'name',
+      name: 'Name',
+      width: 400,
+      filterable: true
+    }],
+    rows: [{
+        id: 0,
+        name: 'Chuck Norris',        
+      }]
   },
 };
 
-class HowToListPage extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
+class HowToListPage extends React.Component {  
   render() {
     return (
       <div>
