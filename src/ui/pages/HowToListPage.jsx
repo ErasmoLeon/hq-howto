@@ -4,11 +4,20 @@ import { Container } from '../layout/Container';
 import { Message, MessageHeader, MessageBody } from '../components/Message';
 import { Hero, HeroBody } from '../layout/Hero';
 import { Card, CardContent, CardFooter, CardFooterItem } from '../components/Card';
-import PeopleInformation from '../components/PeopleInformation';
+import GridInformation from '../components/GridInformation';
+
+const state = {
+  peopleInformation: {
+    containerClass: 'people-information-container',
+    navbarClass: 'people-information-navbar',
+    title: 'Información de personas',
+    navItems: ['Desaparecidas', 'Rescatadas']
+  },
+};
 
 class HowToListPage extends React.Component {
-  
-  constructor( props ){
+
+  constructor(props) {
     super(props);
   }
 
@@ -62,8 +71,8 @@ class HowToListPage extends React.Component {
             </Column>
           </Columns>
         </Container>
-        <br/>
-        <PeopleInformation />
+        <br />
+        <GridInformation {...state.peopleInformation} />
       </div>
     );
   }
