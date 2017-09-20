@@ -4,8 +4,14 @@ import { Container } from '../layout/Container';
 import { Message, MessageHeader, MessageBody } from '../components/Message';
 import { Hero, HeroBody } from '../layout/Hero';
 import { Card, CardContent, CardFooter, CardFooterItem } from '../components/Card';
+import PeopleInformation from '../components/PeopleInformation';
 
 class HowToListPage extends React.Component {
+  
+  constructor( props ){
+    super(props);
+  }
+
   render() {
     return (
       <div>
@@ -56,6 +62,8 @@ class HowToListPage extends React.Component {
             </Column>
           </Columns>
         </Container>
+        <br/>
+        <PeopleInformation />
       </div>
     );
   }
